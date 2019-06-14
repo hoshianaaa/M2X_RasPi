@@ -1,3 +1,4 @@
+
 #!/bin/sh -e
 #
 # rc.local
@@ -10,7 +11,6 @@
 # bits.
 #
 # By default this script does nothing.
-
 # Print the IP address
 _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
@@ -18,65 +18,8 @@ if [ "$_IP" ]; then
 fi
 
 /etc/shutdown.py &
-export API_KEY=c85934d2d5c823f9cde6415a97002b75
-export DEVICE_ID=f66d2d0ee3f338536118ef74661fab98
-export stream_name=temperature
-"/etc/rc.local" [読込専用] 27L, 652C
-#!/bin/sh -e
-#
-# rc.local
-#
-# This script is executed at the end of each multiuser runlevel.
-# Make sure that the script will "exit 0" on success or any other
-# value on error.
-#
-# In order to enable or disable this script just change the execution
-# bits.
-#
-# By default this script does nothing.
-
-# Print the IP address
-_IP=$(hostname -I) || true
-if [ "$_IP" ]; then
-  printf "My IP address is %s\n" "$_IP"
-fi
-
-/etc/shutdown.py &
-export API_KEY=c85934d2d5c823f9cde6415a97002b75
-export DEVICE_ID=f66d2d0ee3f338536118ef74661fab98
-export stream_name=temperature
-"/etc/rc.local" [読込専用] 27L, 652C
-#!/bin/sh -e
-#
-# rc.local
-#
-# This script is executed at the end of each multiuser runlevel.
-# Make sure that the script will "exit 0" on success or any other
-# value on error.
-#
-# In order to enable or disable this script just change the execution
-# bits.
-#
-# By default this script does nothing.
-
-# Print the IP address
-_IP=$(hostname -I) || true
-if [ "$_IP" ]; then
-  printf "My IP address is %s\n" "$_IP"
-fi
-
-/etc/shutdown.py &
-export API_KEY=c85934d2d5c823f9cde6415a97002b75
-
-# Print the IP address
-_IP=$(hostname -I) || true
-if [ "$_IP" ]; then
-  printf "My IP address is %s\n" "$_IP"
-fi
-
-/etc/shutdown.py &
-export API_KEY=c85934d2d5c823f9cde6415a97002b75
-export DEVICE_ID=f66d2d0ee3f338536118ef74661fab98
+export API_KEY=-------------------------------
+export DEVICE_ID=----------------------------------
 export stream_name=temperature
 export stream_name_2=humidity
 (sleep 20;/etc/test_stream.py) > /tmp/log.txt 2>&1 &
